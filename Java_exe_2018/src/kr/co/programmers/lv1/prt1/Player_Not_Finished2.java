@@ -46,6 +46,7 @@ public class Player_Not_Finished2 {
 			// 모두 동일하면 : 마지막 participant 이 정답
 			if ( !(participant[i].equals(completion[i])) ) {
 				rtn_val = participant[i];
+				break;
 			}
 		}
         // 모두 동일한 경우
