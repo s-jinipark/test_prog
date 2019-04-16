@@ -1,7 +1,5 @@
 package kr.co.programmers.lv1.prt3;
 
-import kr.co.programmers.lv1.prt2.Person_Give_Up_Math;
-
 public class Kth_Number {
 
 	public static void main(String[] args) {

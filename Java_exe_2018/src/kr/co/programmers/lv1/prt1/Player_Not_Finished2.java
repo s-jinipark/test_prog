@@ -1,8 +1,6 @@
 package kr.co.programmers.lv1.prt1;
 
 import java.util.Arrays;
-import java.util.Enumeration;
-import java.util.Hashtable;
 
 public class Player_Not_Finished2 {
 
