@@ -1,10 +1,10 @@
 package kr.co.programmers.lv2.prt9;
 
-public class Phone_Num_List2 {
+public class Phone_Num_List3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Phone_Num_List2 pnl = new Phone_Num_List2();
+		Phone_Num_List3 pnl = new Phone_Num_List3();
 		
 		String[] s1 = { "119", "97674223", "1195524421" };
 		boolean rtn1 = pnl.solution( s1 );
@@ -29,8 +29,8 @@ public class Phone_Num_List2 {
         	String temp = phone_book[i];
         	for (int j=0 ; j < phone_book.length; j++) {
         		if (i == j ) continue;
-        		//System.out.println("> " + temp.indexOf(phone_book[j]) );
-        		if ( temp.indexOf(phone_book[j])  >= 0 ) {
+        		//System.out.println("> " + phone_book[j].startsWith(temp) );
+        		if ( phone_book[j].startsWith(temp) ) {
         			
         			answer = false;
         			tmp_stop = true;
