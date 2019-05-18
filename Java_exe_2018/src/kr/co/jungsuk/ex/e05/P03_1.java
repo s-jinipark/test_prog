@@ -1,0 +1,19 @@
+package kr.co.jungsuk.ex.e05;
+
+public class P03_1 {
+	// [5-3] 배열 arr에 담긴 모든 값을 더하는 프로그램을 완성하시오.
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = {10, 20, 30, 40, 50 };
+		int sum = 0;
+		
+		//작성
+		for (int i =0; i< arr.length ; i++) {
+			sum += arr[i];
+		}
+		
+		System.out.println("sum =" + sum);
+	}
+
+}
