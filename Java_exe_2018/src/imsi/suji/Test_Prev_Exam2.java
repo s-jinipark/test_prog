@@ -4,7 +4,8 @@ public class Test_Prev_Exam2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String test = "AABBBCCCCD";
+		//String test = "AABBBCCCCD";
+		String test = "AAAABBCDDEF";
 		
 		// 같은 문자가 짝수번 반복되면 1/2 를 잘라내어 뒤에 붙임
 		// 뒤에 붙일 때는  " org - 2 - 1 " 과 같이 중간에 삽입한다.

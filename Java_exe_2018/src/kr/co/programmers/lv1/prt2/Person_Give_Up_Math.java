@@ -53,6 +53,7 @@ public class Person_Give_Up_Math {
         }
         
         System.out.println(">" + ans[0] + " / " + ans[1] + " / " + ans[2] );
+        
         ArrayList<Integer> al = new ArrayList<>();
         
         for(int j = 0; j<ans.length; j++) {
@@ -68,6 +69,7 @@ public class Person_Give_Up_Math {
         }
         
         System.out.println(al.toString());
+        
         int[] answer = new int[al.size()];
         for (int k=0; k<al.size(); k++ ) {
         	answer[k] = al.get(k);
