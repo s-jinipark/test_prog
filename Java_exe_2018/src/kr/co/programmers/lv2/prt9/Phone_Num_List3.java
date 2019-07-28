@@ -42,6 +42,6 @@ public class Phone_Num_List3 {
         return answer;
         
     }
-	// 일부 테스트 케이스 -> 실패
+
 
 }
