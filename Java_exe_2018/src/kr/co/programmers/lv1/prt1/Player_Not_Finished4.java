@@ -53,7 +53,7 @@ public class Player_Not_Finished4 {
 	    	}
 	    }
 	    
-	    if (!(find)) {
+	    if (!(find)) { // 아직도 발견이 안 됐다면
 	    	rtn_val = participant[participant.length-1]; // 마지막
 	    }
 	   

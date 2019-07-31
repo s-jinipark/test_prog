@@ -10,7 +10,8 @@ public class StackExample {
 		coinBox.push(new Coin(50));
 		coinBox.push(new Coin(500));
 		coinBox.push(new Coin(10));
-		
+
+		// 마지막 넣은 동전이 먼저 나온다
 		while(!coinBox.isEmpty()) {
 			Coin coin = coinBox.pop();
 			System.out.println("꺼내온 동전 : " + coin.getValue() + "원");

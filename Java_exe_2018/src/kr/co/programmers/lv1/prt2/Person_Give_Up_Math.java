@@ -10,7 +10,7 @@ public class Person_Give_Up_Math {
 		int[] answers1 = { 1,2,3,4,5 };
 		int[] answers2 = { 1,3,2,4,2 };
 		
-		int[] answers3 = { 1,3,2,4,2 ,2,2,2,2 };
+		int[] answers3 = { 1,3,2,4,2,2,2,2,2 };
 		
 		int[] answer1 = pgum.solution(answers1);
 		int[] answer2 = pgum.solution(answers2);
@@ -34,7 +34,7 @@ public class Person_Give_Up_Math {
         for(int i = 0; i<answers.length; i++) {
         	//System.out.println(i + " // " + i%5);
         	if (i >= 5) {
-        		if ( answers[i] == p1[i%5] ) ans[0]++;
+        		if ( answers[i] == p1[i%5] ) ans[0]++; // 5 반복에서 5번을 넘었을 경우
         	} else {
         		if ( answers[i] == p1[i] ) ans[0]++;
         	}

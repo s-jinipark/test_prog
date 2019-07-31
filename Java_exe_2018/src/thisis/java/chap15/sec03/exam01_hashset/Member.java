@@ -21,4 +21,6 @@ public class Member {
 	public int hashCode() {
 		return name.hashCode() + age;
 	}
+	
+	// equals 와 hashCode 주석처리하면 총 객체 수 -> 2개로 인식..
 }

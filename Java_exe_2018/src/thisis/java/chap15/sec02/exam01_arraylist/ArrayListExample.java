@@ -12,7 +12,7 @@ public class ArrayListExample {
 		list.add(2, "Database"); // 2 자리로 삽입
 		list.add("iBATIS");
 		// [2]
-		list.add("iBATIS");
+		list.add("iBATIS"); // 중복값도 저장됨
 		
 		int size = list.size(); // 저장된 총 객체 수 얻기
 		System.out.println("총 객체수: " + size);		

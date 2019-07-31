@@ -24,5 +24,22 @@ public class ArraysAsListExample_my2 {
 		for(int value : list2) {
 			System.out.println(value);
 		}
+		
+		
+		// List A 에 포함된 요소 B 에서 제거
+		String[] name1 = {"ABC", "CBB", "KKK"};
+		String[] name2 = {"ABC", "CBB"};
+		
+		List<String> listA = Arrays.asList(name1);
+		List<String> listB = new ArrayList<>(Arrays.asList(name2));
+
+		//listA.remove("ABC");  // 이 경우 에러 발생 - java.lang.UnsupportedOperationException
+		listB.remove("ABC");
+
+//		for (String s : listB) {
+//			listA.remove(s);
+//		}
+		System.out.println(">" + listA);
+		System.out.println(">" + listB);
 	}
 }

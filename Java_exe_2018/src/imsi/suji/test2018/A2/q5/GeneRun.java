@@ -31,12 +31,12 @@ public class GeneRun {
 		// 제공 데이터 세트 1
 		/////////////////////////////////
 
-		String inputData = "AGTCATG,GTTAG";
+//		String inputData = "AGTCATG,GTTAG";
 
 		//////////////////////////////////
 		// 제공 데이터 세트 2
 		/////////////////////////////////
-//	    	String inputData = "ATTCGG,GTAT";
+	    	String inputData = "ATTCGG,GTAT";
 
 		return inputData;
 	}

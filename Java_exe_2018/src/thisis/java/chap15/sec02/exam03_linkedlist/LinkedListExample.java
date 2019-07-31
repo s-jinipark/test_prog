@@ -7,7 +7,7 @@ import java.util.List;
 public class LinkedListExample {
 	public static void main(String[] args) {
 		List<String> list1 = new ArrayList<String>();
-		List<String> list2 = new LinkedList<String>();
+		List<String> list2 = new LinkedList<String>(); //**
 		
 		long startTime;
 		long endTime;

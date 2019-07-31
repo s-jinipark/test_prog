@@ -1,7 +1,10 @@
 package kr.co.programmers.lv1.prt1;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
 
 public class Player_Not_Finished3 {
 
@@ -35,56 +38,24 @@ public class Player_Not_Finished3 {
 		// TODO Auto-generated method stub
 		String rtn_val = "";
 		
-		ArrayList<String> p1 = new ArrayList<>();
-		ArrayList<String> c1 = new ArrayList<>();
-
-		for (int i =0 ; i<participant.length ; i++) {
-			p1.add(participant[i]);
-			if (i < participant.length-1) { //c1 이 1 개 작다
-				c1.add(completion[i]);
-			}
-		}
-		
-		//p1.retainAll(c1); // p1 에서 c1과 겹치는 부분만 남기고 나머지 삭제
-		
-
-		// p1 에서 c1 에 포함된 객체를 삭제한다
-//		for(int i= p1.size()-1; i >= 0; i--) {
-//			if(c1.contains(p1.get(i)))
-//				p1.remove(i);
-//		}
-		
-		//rtn_val = p1.toString();
-		
-		/*
-		[1] : [leo]
-		[2] : [vinko]
-		[3] : []
-
-		3번 경우 [3] : mislav 가 나와야 함
-		이 방식은 중복도 함께 지워버림
-		*/
-		
-//		Arrays.sort(participant);
-//		Arrays.sort(completion);
-//			
-//		for (int i=0 ; i<completion.length ; i++) {
-//			
-//			if ( !(completion[i].equals(participant[i] ) ) ) {
-//				rtn_val = participant[i];
-//				break;
-//			}
-//			
-//			if ("".equals( rtn_val )) {
-//				rtn_val = participant[participant.length-1];
+//		ArrayList<String> p1 = new ArrayList<>();
+//		ArrayList<String> c1 = new ArrayList<>();
+//
+//		for (int i =0 ; i<participant.length ; i++) {
+//			p1.add(participant[i]);
+//			if (i < participant.length-1) { //c1 이 1 개 작다
+//				c1.add(completion[i]);
 //			}
 //		}
-		
+		// [2]
+		// 이부분은 asList 로 ??
+		ArrayList<String> p1 = new ArrayList<>(Arrays.asList(participant));
+		ArrayList<String> c1 = new ArrayList<>(Arrays.asList(completion));
 		
 		HashMap<String, Integer> hm = new HashMap<>();
 		
 		for (String player : participant) {
-			//hm.put(player, hm.get(player) + 1);
+			//hm.put(player, hm.get(player) + 1);  // java.lang.NullPointerException
 			hm.put(player, hm.getOrDefault(player, 0) + 1);
 		}
 		for (String player : completion) {
@@ -92,6 +63,18 @@ public class Player_Not_Finished3 {
 		}		
 		
 		System.out.println(hm);
+		// value 가 1인 사람?
+		Set keySet = hm.keySet();
+		Iterator it = keySet.iterator();
+		
+		while (it.hasNext()) {
+			String key = (String)it.next();
+			if (hm.get(key) == 1) {
+				rtn_val = key;
+				break;
+			}
+		}
+
 		return rtn_val;
 	}
 

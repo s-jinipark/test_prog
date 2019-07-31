@@ -53,9 +53,13 @@ public class Gym_Suit4 {
 
 	public int solution(int n, int[] lost, int[] reserve) {
         int answer = 0;
-        answer = n;
-
+        answer = n;  // n 은 전체 학생 수
+        int bollowed = 0;
         
+        // 1. 여벌 체육복을 가져온 학생이 체육복을 도난당했을 수 있습니다        
+        // 2. 도난 당한 번호 -> 여벌 앞 먼저 보고 , 뒷번호 확인
+        
+
         ArrayList<Integer> a_lost = new ArrayList<>();
         ArrayList<Integer> a_resv = new ArrayList<>();
         
@@ -66,52 +70,51 @@ public class Gym_Suit4 {
        		a_resv.add(j);
        	}
        	
-       	int bollowed = 0;
-       	int self = 0;
+
        	// 잃어버린 사람 중 여분의 옷을 가지고 있는 경우 먼저 처리
-       	for (int i=0 ; i<a_lost.size() ; i++) {
+       	// 뒤에서 부터 loop 필요 **
+       	for (int i=a_lost.size()-1 ; i>=0 ; i--) {
        		int tmp = a_lost.get(i);
        		
-       		//if ( a_resv.contains(tmp) ) { //-> 안됨
-       		for (int j=0 ; j<a_resv.size() ; j++) {
+       		for (int j=a_resv.size()-1 ; j>=0 ; j--) {
        			if (tmp == a_resv.get(j)) {
 	       			// 양쪽 쌍으로 지워준다
 	       			a_lost.remove(i);
 	       			a_resv.remove(j);
-	       			self++;
+	       			bollowed++;
 	       			break;
        			}
        		}
        	}
+       	//System.out.println(a_lost);
+       	//System.out.println(a_resv);
        	
-       	// 일단 a_lost 정렬
        	// 앞번호 부터 검색 후 처리
        	Collections.sort(a_lost);
     	Collections.sort(a_resv);
     	
-       	for (int i=0 ; i<a_lost.size() ; i++) {
-       		int prev = a_lost.get(i)-1;
-       		int next = a_lost.get(i)+1;
-
-       		for (int j=0 ; j<a_resv.size() ; j++) { // 앞 번호 먼저
-       			if (prev == a_resv.get(j)) {
-
-	       			a_resv.remove(j);
-	       			bollowed++;
+    	for (int i=0 ; i<a_lost.size() ; i++) {
+    		int tmp = a_lost.get(i);
+    		int prev = tmp-1;
+    		int next = tmp+1;
+    		
+    		for (int j=0; j<a_resv.size() ; j++) {
+    			int tmp2 = a_resv.get(i);
+    			if ( tmp2 == prev ) {	// 앞번호 먼저
+    				a_resv.remove(j);
+    				bollowed++;
 	       			break;
-       			}else if (next == a_resv.get(j)) {
-
-	       			a_resv.remove(j);
-	       			bollowed++;
+    			}
+    			if ( tmp2 == next ) {
+    				a_resv.remove(j);
+    				bollowed++;
 	       			break;
-       			}
-       		}
-       		
-       	}    	
-       	
-        System.out.println("1->" + bollowed + "/ 2->" + self);
-        // 초기 인원 - 잃어버린 인원 + 빌린 인원
-    	answer = answer - (lost.length-self) + bollowed ;	
+    			}
+    		}
+    	}
+    	
+    	answer = answer - lost.length + bollowed;
+    	
         return answer;
 	}
 }
