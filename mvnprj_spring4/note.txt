@@ -1,0 +1,28 @@
+
+스프링은 설정 정보로부터 생성한 스프링 빈 객체를 생성/조립/관리하는 기능을 제공하는데,
+이 기능을 제공하는 객체를 컨테이너라고 부른다.
+
+스프링의 가장 기본적인 기능은 객체를 생성하고 초기화하여 필요로 하는 곳에 제공하는 것인데
+이 중심에는 DI(Dependency Injection) 이라는 설계 패턴이 적용되어 있다.
+
+스프링 XML 설정의 기본 골격
+<bean id="빈 식별자" class="생성할 객체의 완전한 클래스 이름">
+  <property name="프로퍼티 이름">
+    <value>프로퍼티값</value>
+  </property>
+  <property name="프로퍼티 이름" ref="다른 빈 식별자" />
+</bean>
+
+<bean id="빈 식별자" class="생성할 객체의 완전한 클래스 이름">
+  <constructor-arg><value>인자값</value></constructor-arg>
+  <constructor-arg><ref bean="다른 빈 식별자" /></constructor-arg>
+</bean>
+
+@Component 애노테이션은 용도 별로 의미를 부여하는 하위 타입을 갖고 있는데,
+다음은 그 종류들이다.
+
+Componet : 스프링 빈 임을 의미
+Service : DDD(도메인 주도 설계) 에서의 서비스를 의미
+Repository : DDD 에서의 리파지터리를 의미
+Controller : 웹 MVC 의 컨트롤러를 의미
+
