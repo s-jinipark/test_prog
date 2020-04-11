@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<movies>
+<movie>
+<rank>1</rank> <mname>정직한 후보</mname> <imgsrc>//images.maxmovie.com/thumbf/movie_info/image/2019/12/M000115507/poster/Max2019Honest2.jpg</imgsrc> 
+</movie>
+<movie>
+<rank>2</rank> <mname>다크 워터스</mname> <imgsrc>//images.maxmovie.com/thumbf/movie_info/image/2019/12/M000115349/poster/Max2020DarkWater1_0.jpg</imgsrc> 
+</movie>
+<movie>
+<rank>3</rank> <mname>1917</mname> <imgsrc>//images.maxmovie.com/thumbf/movie_info/image/2020/01/M000115662/poster/MAX202019174_0.jpg</imgsrc> 
+</movie>
+<movie>
+<rank>4</rank> <mname>인비저블맨</mname> <imgsrc>//images.maxmovie.com/thumbf/movie_info/image/2020/01/M000115652/poster/Max2020InvisibleMan2_0.jpg</imgsrc> 
+</movie>
+<movie>
+<rank>5</rank> <mname>스타 이즈 본</mname> <imgsrc>//images.maxmovie.com/thumbf/movie_info/image/2018/08/M000108484/poster/Max2018StarIsBorn2.jpg</imgsrc> 
+</movie>
+<movie>
+<rank>6</rank> <mname>찬실이는 복도 많지</mname> <imgsrc>//images.maxmovie.com/thumbf/movie_info/image/2019/12/M000115434/poster/Max2020LuckyChansil2.jpg</imgsrc> 
+</movie>
+<movie>
+<rank>7</rank> <mname>작은 아씨들</mname> <imgsrc>//images.maxmovie.com/thumbf/movie_info/image/2019/12/M000115380/poster/Max2020LittleWomen3.jpg</imgsrc> 
+</movie>
+<movie>
+<rank>8</rank> <mname>지푸라기라도 잡고 싶은 짐승들</mname> <imgsrc>//images.maxmovie.com/thumbf/movie_info/image/2018/09/M000108660/poster/Max2019Beasts3_0.jpg</imgsrc> 
+</movie>
+<movie>
+<rank>9</rank> <mname>더 보이 2: 돌아온 브람스</mname> <imgsrc>//images.maxmovie.com/thumbf/movie_info/image/2020/01/M000115971/poster/Max2020TheBoy2_p3_1.jpg</imgsrc> 
+</movie>
+<movie>
+<rank>10</rank> <mname>조커</mname> <imgsrc>//images.maxmovie.com/thumbf/movie_info/image/2019/05/M000112265/poster/Max2019Joker2.jpg</imgsrc> 
+</movie>
+</movies>
