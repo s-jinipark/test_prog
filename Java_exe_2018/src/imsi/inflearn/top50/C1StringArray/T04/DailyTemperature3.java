@@ -1,10 +1,10 @@
-package imsi.inflearn.top50.C1StringArray;
+package imsi.inflearn.top50.C1StringArray.T04;
 
 import java.util.*;
 import java.util.Stack;
 
 
-public class T04_DailyTemperature3 {
+public class DailyTemperature3 {
 
 	public static void main(String[] args) {
 		int[] nums = {73, 74, 75, 71, 69, 72, 76, 73};

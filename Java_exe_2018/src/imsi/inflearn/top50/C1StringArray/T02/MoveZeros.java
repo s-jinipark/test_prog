@@ -1,4 +1,4 @@
-package imsi.inflearn.top50.C1StringArray;
+package imsi.inflearn.top50.C1StringArray.T02;
 /*
  * Time Complexity: O(n)
  * 데이타  int[] nums = {0,3, 2, 0, 8, 5};
@@ -7,7 +7,7 @@ package imsi.inflearn.top50.C1StringArray;
  * 주어진 문제에서 int currentIndex = 0;
  * 상수는 하나만 사용했으니까
  */
-public class T02_MoveZeros {
+public class MoveZeros {
 
 	public static void main(String args[]) {
 		// 1

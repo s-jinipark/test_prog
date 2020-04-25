@@ -1,4 +1,4 @@
-package imsi.inflearn.top50.C1StringArray;
+package imsi.inflearn.top50.C1StringArray.T01;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -21,9 +21,9 @@ class Interval{
 		this.end = e;
 	}
 }
-public class T01_MeetingRooms {
+public class MeetingRooms {
 	public static void main(String[] args) {
-		T01_MeetingRooms a = new T01_MeetingRooms();
+		MeetingRooms a = new MeetingRooms();
 		
 		// [1]
 //		Interval in1 = new Interval(15,20);

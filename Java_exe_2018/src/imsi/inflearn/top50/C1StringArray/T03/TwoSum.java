@@ -1,13 +1,13 @@
-package imsi.inflearn.top50.C1StringArray;
+package imsi.inflearn.top50.C1StringArray.T03;
 
 import java.util.*;
 
-public class T03_TwoSum {
+public class TwoSum {
 
 	public static void main(String[] args) {
 		int[] nums = {2,8,11,21};
         int target =10;
-        T03_TwoSum a = new T03_TwoSum();
+        TwoSum a = new TwoSum();
         int[]  result = a.solve(nums, target);
         for(int i : result)
         	System.out.println(i);
