@@ -11,10 +11,15 @@ public class Test02 {
 		
 		Test02 t = new Test02();
 		
-		String[][] tickets = {
-			{"ICN", "JFK"}, {"HND", "IAD"}, {"JFK", "HND"}
-		};
+//		String[][] tickets = {
+//			{"ICN", "JFK"}, {"HND", "IAD"}, {"JFK", "HND"}
+//		};
 		
+		String[][] tickets = {
+			{"ICN", "SFO"}, {"ICN", "ATL"}, {"SFO", "ATL"}, 
+			{"ATL", "ICN"}, {"ATL","SFO"}
+			};	
+				
 		String[] an = t.solution(tickets);
 		
 		System.out.println(an);
@@ -32,7 +37,7 @@ public class Test02 {
     	List<String> rtn_list = new ArrayList<String>();
     	
     	for (int i=0 ; i<tickets.length ; i++) {
-    		System.out.println(">" + tickets[i][0] + " / " + tickets[i][1] );
+    		//System.out.println(">" + tickets[i][0] + " / " + tickets[i][1] );
     		// 일단은 List 에 넣어야 할 듯
     		ticket_list.add( tickets[i] );
     	}
@@ -43,7 +48,7 @@ public class Test02 {
     	while (ticket_list.size() > 0) {
     		//System.out.println( netTargetIdx(next , ticket_list) );
     		int tmp_idx = netTargetIdx(src , ticket_list);
-    		System.out.println( tmp_idx );
+    		//System.out.println( tmp_idx );
         	rtn_list.add(ticket_list.get(tmp_idx)[1]);
         	src = ticket_list.get(tmp_idx)[1]; // 그 다음번의 스타트
         	ticket_list.remove(tmp_idx);

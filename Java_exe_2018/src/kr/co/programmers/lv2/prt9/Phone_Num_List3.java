@@ -21,19 +21,15 @@ public class Phone_Num_List3 {
 
 	public boolean solution(String[] phone_book) {
         boolean answer = true;
-        // 어떤 번호가 다른 번호의 접두어인 경우가 있으면 false
-        // 그렇지 않으면 true를 return 
-        boolean tmp_stop = false;
-        for (int i=0; i< phone_book.length ; i++) {
-        	if (tmp_stop) break;
-        	String temp = phone_book[i];
-        	for (int j=0 ; j < phone_book.length; j++) {
-        		if (i == j ) continue;
-        		//System.out.println("> " + phone_book[j].startsWith(temp) );
-        		if ( phone_book[j].startsWith(temp) ) {
-        			
+		// ** 재연습
+        // 비교하여 한 번호가 다른 번호의 접두사인 경우 : false 
+        
+        for (int i=0; i<phone_book.length ; i++ ) {
+        	for (int j=0 ; j<phone_book.length ; j++) {
+        		if ( i != j
+        				&& phone_book[j].startsWith(phone_book[i])) {
+        			System.out.println(">" + phone_book[i] + " / " + phone_book[j]);
         			answer = false;
-        			tmp_stop = true;
         			break;
         		}
         	}

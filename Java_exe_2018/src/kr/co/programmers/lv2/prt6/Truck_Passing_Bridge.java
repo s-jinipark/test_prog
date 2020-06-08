@@ -44,7 +44,6 @@ public class Truck_Passing_Bridge {
 		
 		while (time_cnt <100) {
 			
-			
 			while ( !al1.isEmpty() ) { // 대기열이 비워질 때 까지
 
 				// 다리를 건너는 트럭 유무 및 무게 함
@@ -58,17 +57,15 @@ public class Truck_Passing_Bridge {
 				} else {
 					System.out.println(">>");
 
-					
 					break;
 				}
 				
 			} 
 
-			
 			System.out.println(">" + tmp_i );
 			time_cnt++;
 		}
         return answer;
     }
-    
+    // 안됨.
 }

@@ -44,4 +44,7 @@ public class Phone_Num_List2 {
     }
 	// 일부 테스트 케이스 -> 실패
 
+	// if ( temp.indexOf(phone_book[j])  >= 0 ) {  를  (33 라인?)
+	// if ( phone_book[j].startsWith(temp) ) {  로 변경
+	
 }

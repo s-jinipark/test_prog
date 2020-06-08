@@ -31,13 +31,15 @@ public class Player_Not_Finished2 {
 	}
 
 	public String solution(String[] participant, String[] completion) {
-		// TODO Auto-generated method stub
+
 		String rtn_val = "";
 		
+		// 각각 소트 -> 비교 ->> 어긋나는 경우 당첨
 		Arrays.sort(participant);
 		Arrays.sort(completion);
 		
-		// completion 이 하나 적음
+		// completion 이 하나 적음 (-1)
+		// 완주자가 1 적다고 하니 -> 완주자 기준
 		for (int i = 0; i<participant.length -1 ; i++) {
 			//System.out.println(">" + participant[i] + "/" + completion[i]);
 			// 비교하여 다를 경우 : participant 이 정답
@@ -48,7 +50,7 @@ public class Player_Not_Finished2 {
 			}
 		}
         // 모두 동일한 경우
-		if ( "".equals(rtn_val))  {
+		if ( "".equals(rtn_val))  { // 아직도 발견이 안 됐다면
 			rtn_val = participant[participant.length-1]; // 마지막 value
 		}
 		

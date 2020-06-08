@@ -1,8 +1,7 @@
 package kr.co.programmers.lv1.prt1;
 
-import java.util.Arrays;
-import java.util.Enumeration;
-import java.util.Hashtable;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Player_Not_Finished4 {
 
@@ -34,29 +33,27 @@ public class Player_Not_Finished4 {
 
 	public String solution(String[] participant, String[] completion) {
 		// TODO Auto-generated method stub
-
-	    String rtn_val = "";
-
-	    // 각각 소트 -> 비교 ->> 어긋나는 경우 당첨
-	    Arrays.sort(participant);
-	    Arrays.sort(completion);
-	    
-	    boolean find = false;
-	    
-	    // 완주자가 1 적다고 하니 -> 완주자 기준
-	    for (int i=0 ; i< completion.length ; i++) {
-	    	
-	    	if ( !( participant[i].equals(completion[i]) ) ){ // 같지 않다
-	    		rtn_val = participant[i];
-	    		find = true;
-	    		break;
-	    	}
-	    }
-	    
-	    if (!(find)) { // 아직도 발견이 안 됐다면
-	    	rtn_val = participant[participant.length-1]; // 마지막
-	    }
-	   
+		// ** 재연습
+		String rtn_val = "";
+		
+		Map<String, Integer> m = new HashMap<String, Integer>();
+		
+		for (int i=0 ; i<participant.length ; i++) {
+			int tmp_i = m.getOrDefault(participant[i], 0);
+			//System.out.println(">" + tmp_i);
+			m.put(participant[i], tmp_i+1);
+		}
+		//System.out.println(">" + m);
+		// 완주
+		for (int i=0 ; i<completion.length ; i++) {
+			int tmp_i = m.get(completion[i]);
+			if (tmp_i == 1) {
+				m.remove(completion[i]);
+			} else {
+				m.put(completion[i], tmp_i-1);
+			}
+		}
+		System.out.println("->" + m);
 		return rtn_val;
 	}
 }

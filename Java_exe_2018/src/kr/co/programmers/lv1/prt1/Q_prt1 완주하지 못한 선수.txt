@@ -27,3 +27,43 @@ vinko는 참여자 명단에는 있지만, 완주자 명단에는 없기 때문에 완주하지 못했습니다.
 
 예제 #3
 mislav는 참여자 명단에는 두 명이 있지만, 완주자 명단에는 한 명밖에 없기 때문에 한명은 완주하지 못했습니다.
+
+
+==================================================
+
+import java.util.HashMap;
+
+class Solution {
+    public String solution(String[] participant, String[] completion) {
+        String answer = "";
+        HashMap<String, Integer> hm = new HashMap<>();
+        for (String player : participant) hm.put(player, hm.getOrDefault(player, 0) + 1);
+        for (String player : completion) hm.put(player, hm.get(player) - 1);
+
+        for (String key : hm.keySet()) {
+            if (hm.get(key) != 0){
+                answer = key;
+            }
+        }
+        return answer;
+    }
+}
+
+==================================================
+
+import java.util.*;
+class Solution {
+    public String solution(String[] participant, String[] completion) {
+        Arrays.sort(participant);
+        Arrays.sort(completion);
+        int i;
+        for ( i=0; i<completion.length; i++){
+
+            if (!participant[i].equals(completion[i])){
+                return participant[i];
+            }
+        }
+        return participant[i];
+    }
+}
+
