@@ -1,10 +1,10 @@
 package kr.co.programmers.lv2.prt3;
 
-public class Tower {
+public class TowerTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Tower t = new Tower();
+		TowerTest t = new TowerTest();
 		
 		int[]  h1 = { 6,9,5,7,4 };
 		int[] rtn1 = t.solution( h1 );

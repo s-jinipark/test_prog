@@ -30,19 +30,37 @@ public class Truck_Passing_Bridge3 {
 	public int solution(int bridge_length, int weight, int[] truck_weights) {
 		int answer = 0;
 		
-		int time = 0;
+		// 인터넷 참조
+		Queue<Truck> waiting = new LinkedList<>();
 		Queue<Truck> bridge = new LinkedList<>();
-		int lastEnterTruckIndex = 0;
-		int currentBridgeWeight = 0;
-		int truckNumber = truck_weights.length;  // 트럭 수
 		
-		while (lastEnterTruckIndex < truckNumber) {
-			time++; 
-			
-			
+		// 일단 waiting 에
+		for (int i=0 ; i<truck_weights.length ; i++) {
+			waiting.offer(new Truck(truck_weights[i], 0));
 		}
 		
-		
+		int time = 0;
+		int totalWeight = 0;
+		while(!waiting.isEmpty() || !bridge.isEmpty() ) {
+			time++;
+			if (!bridge.isEmpty()) {
+				Truck t = bridge.peek();
+				if (time - t.enterTime >= bridge_length) {
+					totalWeight -= t.weight;
+					bridge.poll();
+				}
+			}
+			
+			if (!waiting.isEmpty()) {
+				if (totalWeight + waiting.peek().weight <= weight ) {
+					Truck t = waiting.poll();
+					totalWeight += t.weight;
+					
+					bridge.offer(new Truck(t.weight, time));
+				}
+			}
+		}
+		answer = time;
         return answer;
     }
 
